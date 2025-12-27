@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Music Player</title>
+    <link rel="stylesheet" href="music-player.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <div class="music-player-container">
+        <!-- Hidden checkboxes for state management -->
+        <input type="checkbox" id="play-pause" class="control-checkbox">
+        <input type="checkbox" id="shuffle" class="control-checkbox">
+        <input type="checkbox" id="repeat" class="control-checkbox">
+        <input type="checkbox" id="playlist-toggle" class="control-checkbox">
+        
+        <div class="music-player">
+            <!-- Playlist Toggle -->
+            <label for="playlist-toggle" class="playlist-toggle-btn" title="Playlist">
+                <i class="fas fa-list"></i>
+            </label>
+
+            <!-- Album Art -->
+            <div class="album-art">
+                <div class="vinyl-record">
+                    <div class="vinyl-grooves"></div>
+                </div>
+                <div class="album-cover album-cover-1">
+                    <div class="colorful-pattern pattern-1"></div>
+                    <div class="colorful-pattern pattern-2"></div>
+                    <div class="colorful-pattern pattern-3"></div>
+                    <div class="music-icon-wrapper">
+                        <i class="fas fa-music"></i>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Song Info -->
+            <div class="song-info">
+                <h3 class="song-title">Beautiful Music</h3>
+                <p class="artist-name">The CSS Artists</p>
+            </div>
+
+            <!-- Progress Bar -->
+            <div class="progress-container">
+                <div class="progress-bar">
+                    <div class="progress-fill"></div>
+                    <div class="progress-handle"></div>
+                </div>
+                <div class="time-info">
+                    <span class="current-time">1:23</span>
+                    <span class="total-time">3:45</span>
+                </div>
+            </div>
+
+            <!-- Controls -->
+            <div class="controls">
+                <!-- Shuffle Toggle -->
+                <label for="shuffle" class="control-btn shuffle-btn" title="Shuffle">
+                    <i class="fas fa-random"></i>
+                </label>
+
+                <!-- Previous Button -->
+                <button class="control-btn prev-btn" title="Previous">
+                    <i class="fas fa-step-backward"></i>
+                </button>
+
+                <!-- Play/Pause Toggle -->
+                <label for="play-pause" class="control-btn play-pause-btn" title="Play/Pause">
+                    <i class="fas fa-play play-icon"></i>
+                    <i class="fas fa-pause pause-icon"></i>
+                </label>
+
+                <!-- Next Button -->
+                <button class="control-btn next-btn" title="Next">
+                    <i class="fas fa-step-forward"></i>
+                </button>
+
+                <!-- Repeat Toggle -->
+                <label for="repeat" class="control-btn repeat-btn" title="Repeat">
+                    <i class="fas fa-redo"></i>
+                </label>
+            </div>
+
+            <!-- Volume Control -->
+            <div class="volume-container">
+                <label for="volume" class="volume-label">
+                    <i class="fas fa-volume-up"></i>
+                </label>
+                <div class="volume-slider">
+                    <input type="range" id="volume" class="volume-input" min="0" max="100" value="70">
+                    <div class="volume-fill"></div>
+                </div>
+            </div>
+
+            <!-- Playlist -->
+            <div class="playlist">
+                <h4>Playlist</h4>
+                <div class="playlist-items">
+                    <div class="playlist-item active">
+                        <div class="playlist-item-art art-1">
+                            <div class="art-gradient gradient-1"></div>
+                            <i class="fas fa-music"></i>
+                        </div>
+                        <div class="playlist-item-info">
+                            <div class="playlist-item-title">Beautiful Music</div>
+                            <div class="playlist-item-artist">The CSS Artists</div>
+                        </div>
+                        <div class="playlist-item-duration">3:45</div>
+                    </div>
+                    <div class="playlist-item">
+                        <div class="playlist-item-art art-2">
+                            <div class="art-gradient gradient-2"></div>
+                            <i class="fas fa-headphones"></i>
+                        </div>
+                        <div class="playlist-item-info">
+                            <div class="playlist-item-title">Pure CSS Vibes</div>
+                            <div class="playlist-item-artist">HTML Band</div>
+                        </div>
+                        <div class="playlist-item-duration">4:12</div>
+                    </div>
+                    <div class="playlist-item">
+                        <div class="playlist-item-art art-3">
+                            <div class="art-gradient gradient-3"></div>
+                            <i class="fas fa-guitar"></i>
+                        </div>
+                        <div class="playlist-item-info">
+                            <div class="playlist-item-title">No JavaScript</div>
+                            <div class="playlist-item-artist">CSS Symphony</div>
+                        </div>
+                        <div class="playlist-item-duration">3:28</div>
+                    </div>
+                    <div class="playlist-item">
+                        <div class="playlist-item-art art-4">
+                            <div class="art-gradient gradient-4"></div>
+                            <i class="fas fa-drum"></i>
+                        </div>
+                        <div class="playlist-item-info">
+                            <div class="playlist-item-title">Static Beats</div>
+                            <div class="playlist-item-artist">Pure HTML</div>
+                        </div>
+                        <div class="playlist-item-duration">2:56</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
+
